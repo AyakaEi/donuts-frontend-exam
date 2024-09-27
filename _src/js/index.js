@@ -13,7 +13,7 @@ import { getWeatherInfo } from './hooks/getWeatherInfo';
 
       // 天気の情報部分を取得
       const weatherList = responseWeatherJson.daily;
-      // 工数確率を取得（今日・明日）
+      // 降水確率を取得（今日・明日）
       const chanceOfRainList = responseRainJson.forecasts.slice(0, 2);
 
       // データを整形して配列に格納する
