@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DONUTS FRONTEND EXAM</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+  <header class="l-header">
+    <h1 class="l-header__title">DONUTS FRONTEND <br class="u-pc-none">EXAM</h1>
+  </header>
+
+  <main>
+    <section class="l-section">
+      <div class="l-container">
+        <div class="p-overview">
+          <h2 class="c-heading">試験概要</h2>
+          <p>コーディング課題（試験内容）に取り組んでいただきたく、ご案内お願いいたします。</p>
+          <ul class="p-overview__list">
+            <li class="p-overview__item">
+              <h3 class="p-overview__item-heading">フロントエンドエンジニア職に応募の方</h3>
+              <ul class="p-overview__child-list">
+                <li>1 〜 4すべてご対応ください。</li>
+                <li>「4. 提出方法」に関して、githubでの提出を推奨します。</li>
+              </ul>
+            </li>
+            <li class="p-overview__item">
+              <h3 class="p-overview__item-heading">デザイナー職に応募の方</h3>
+              <ul class="p-overview__child-list">
+                <li>「3. APIによる反映」 の対応は不要です。</li>
+                <li>「4. 提出方法」に関して、githubでの提出が難しい場合、圧縮ファイルでの提出でも可です。</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="l-section">
+      <div class="l-container">
+        <div class="p-detail">
+          <h2 class="c-heading">試験内容</h2>
+          <ol class="p-detail__list">
+            <li class="p-detail__item">
+              <h3 class="p-detail__heading">デザインに従ってコーディングをしてください</h3>
+              <p><a href="https://xd.adobe.com/view/6326e7bd-2396-4838-8359-32f096cac59d-3675/" target="_blank"
+                  rel="noopener noreferrer">https://xd.adobe.com/view/6326e7bd-2396-4838-8359-32f096cac59d-3675/</a>のデザインに沿って(問題文等も含めて)コーディングをしてください。<br>
+                なお、ベースとなるソースコードは <a href="https://github.com/d-o-n-u-t-s/web-frontend-exam/" target="_blank"
+                  rel="noopener noreferrer">https://github.com/d-o-n-u-t-s/web-frontend-exam/</a> を Cloneしてご使用ください。</p>
+            </li>
+            <li class="p-detail__item">
+              <h3 class="p-detail__heading">レスポンシブにコーディングしてください</h3>
+              <p>
+                PC、モバイルそれぞれで何か1つのブラウザで確認できる状態にしてください。<br>
+                なお、提出時に確認済みブラウザを共有下さい。
+              </p>
+            </li>
+            <li class="p-detail__item">
+              <h3 class="p-detail__heading">以下のAPIを使って、天気情報を動的に取得し反映させてください</h3>
+              <ul class="p-detail__child-list">
+                <li>Open-Meteo WeatherForecastAPI ... <a href="https://open-meteo.com/en/docs/" target="_blank"
+                    rel="noopener noreferrer">https://open-meteo.com/en/docs/</a></li>
+                <li>天気予報 API（livedoor 天気互換） … <a href="https://weather.tsukumijima.net/" target="_blank"
+                    rel="noopener noreferrer">https://weather.tsukumijima.net/</a></li>
+              </ul>
+              <ul class="p-detail__annotation">
+                <li>weatherCodeに対応する天候名とアイコンの取得はgetWeatherInfo.js を使用してよいものとします。</li>
+                <li>どちらも観測地点は東京とし、(緯度, 経度) = (35.6785, 139.6823) とします。</li>
+                <li>APIからの取得が難しい場合は、レイアウトのみ再現してください。</li>
+              </ul>
+            </li>
+            <li class="p-detail__item">
+              <h3 class="p-detail__heading">以下のいずれかの方法で提出をしてください</h3>
+              <ul class="p-detail__child-list">
+                <li>ご自身のgithub上にリポジトリを作成し、そこにpushした上で、リポジトリURLを共有する。</li>
+                <li>clone先のディレクトリを.gitディレクトリを含んだ状態で圧縮(zip, tar等)し、添付して提出する。</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="l-section">
+      <div class="l-container">
+        <div class="p-today-weather">
+          <h2 class="c-heading">今日/明日の天気</h2>
+          <div class="js-loader u-ta-c">
+            <img src="/static/img/img_loader.svg" alt="読み込み中">
+          </div>
+          <div id="js-todayWeather" class="p-today-weather__wrapper"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="l-section">
+      <div class="l-container">
+        <div class="p-week-wheter">
+          <h2 class="c-heading">今週の天気</h2>
+          <div class="js-loader u-ta-c">
+            <img src="/static/img/img_loader.svg" alt="読み込み中">
+          </div>
+          <div id="js-weekWeather" class="p-week-weather__wrapper">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="l-footer">
+    <small class="l-footer__copyright">© DONUTS Co. Ltd.</small>
+  </footer>
+
+  <script src="/static/js/all.min.js"></script>
+</body>
+
+</html>

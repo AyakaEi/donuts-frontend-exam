@@ -8,8 +8,9 @@
   font-style: normal;
 
   font-display: swap;
-  src: local("Noto Sans JP"),
-  url("../fonts/NotoSansJP-Bold.woff2") format("woff2");
+  src:
+    local("Noto Sans JP"),
+    url("../fonts/NotoSansJP-Regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -18,16 +19,18 @@
   font-style: normal;
 
   font-display: swap;
-  src: local("Noto Sans JP Medium"),
-  url("../fonts/NotoSansJP-Medium.woff2") format("woff2");
+  src:
+    local("Noto Sans JP Medium"),
+    url("../fonts/NotoSansJP-Medium.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Noto Sans JP";
-  font-weight: 900;
+  font-weight: 700;
   font-style: normal;
 
   font-display: swap;
-  src: local("Noto Sans JP Bold"),
-  url("../fonts/NotoSansJP-Bold.woff2") format("woff2");
+  src:
+    local("Noto Sans JP Bold"),
+    url("../fonts/NotoSansJP-Bold.woff2") format("woff2");
 }

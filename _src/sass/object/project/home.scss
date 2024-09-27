@@ -1,0 +1,89 @@
+//*******************************
+// overview
+//*******************************
+.p-overview__list,
+.p-overview__child-list {
+  list-style: disc;
+  padding-left: 1em;
+}
+
+.p-overview__item {
+  margin-top: 16px;
+  & + & {
+    @media #{$pc} {
+      margin-top: 8px;
+    }
+  }
+}
+
+.p-overview__item-heading {
+  font-weight: bold;
+}
+
+//*******************************
+// detail
+//*******************************
+.p-detail__list {
+  counter-reset: item;
+}
+.p-detail__item {
+  margin-top: 32px;
+}
+
+.p-detail__heading {
+  color: $accentColor;
+  font-size: 20px;
+  line-height: calc(32 / 20);
+  font-weight: bold;
+  &::before {
+    counter-increment: item;
+    content: counter(item) ". ";
+  }
+}
+
+.p-detail__child-list {
+  list-style: disc;
+  padding-left: 1em;
+}
+
+.p-detail__annotation {
+  margin-top: 24px;
+  font-size: 12px;
+  @media #{$pc} {
+    margin-top: 16px;
+  }
+  li {
+    position: relative;
+    padding-left: 1.5em;
+    &::before {
+      content: "※";
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+//*******************************
+// today weather
+//*******************************
+.p-today-weather__wrapper {
+  display: grid;
+  gap: 30px 0;
+  @media #{$pc} {
+    grid-template-columns: 60% 40%;
+    gap: 0 16px;
+  }
+}
+
+//*******************************
+// week weather
+//*******************************
+.p-week-weather__wrapper {
+  display: grid;
+  gap: 32px 0;
+  @media #{$pc} {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0 16px;
+  }
+}

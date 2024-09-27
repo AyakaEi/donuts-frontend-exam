@@ -1,0 +1,18 @@
+.c-heading {
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.05em;
+  margin-bottom: 57px;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 8px;
+    border-radius: 50em;
+    background: linear-gradient(69deg, $gradationColor1 0%, $gradationColor2 5%, $gradationColor3 100%);
+  }
+}

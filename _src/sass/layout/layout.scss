@@ -1,0 +1,39 @@
+.l-header {
+  background: linear-gradient(31deg, $gradationColor2 0%, $gradationColor3 100%);
+  padding: 42px 0;
+}
+
+.l-header__title {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.05em;
+  line-height: calc(54 / 30);
+  @media #{$pc} {
+    font-size: 30px;
+    line-height: calc(54 / 36);
+  }
+}
+
+.l-section {
+  padding: 80px 0;
+  &:nth-child(odd) {
+    background-color: #f7f9fb;
+  }
+}
+
+.l-container {
+  max-width: calc(1076px + 16px * 2);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.l-footer {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.l-footer__copyright {
+  font-size: 12px;
+  line-height: calc(21 / 12);
+}
